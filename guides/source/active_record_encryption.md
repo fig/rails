@@ -86,7 +86,7 @@ NOTE: In non-deterministic mode, encryption is done using AES-GCM with a 256-bit
 
 You can encrypt action text attributes by passing `encrypted: true` in their declaration.
 
-```
+```ruby
 class Message < ApplicationRecord
   has_rich_text :content, encrypted: true
 end
@@ -132,7 +132,7 @@ You can use the option `:downcase`  when declaring the encrypted attribute. This
 
 ```ruby
 class Person
-    encrypts :email_address, deterministic: true, downcase: true
+  encrypts :email_address, deterministic: true, downcase: true
 end
 ```
 
